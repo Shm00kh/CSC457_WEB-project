@@ -1,7 +1,10 @@
-# 🇸🇦 Discover Saudi Arabia
+#  Discover Saudi Arabia
 
 A simple web project designed to introduce the regions of Saudi Arabia in an interactive and user-friendly way.
-
+CSC457 | Internet Technologies
+-Shmookh Almoliafai
+-Dimah Althunayan
+-Masheal Alabdullatif
 ---
 
 ## 💡 Project Idea
