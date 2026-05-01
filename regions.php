@@ -1,3 +1,5 @@
+<?php include 'database.php'; ?> // Include the database connection file
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -43,89 +45,23 @@
             </section>
 
             <section class="regions-grid">
-
-                <article class="region-card" data-name="الرياض" data-group="central" data-link="details.php?region=riyadh">
-                    <img src="images\regions\الرياض.jpg" alt="الرياض">
+            <?php
+            $result = mysqli_query($conn, "SELECT * FROM regions"); // Fetch all regions from the database
+            while($row = mysqli_fetch_assoc($result)) { // Loop through each region and display it as a card
+            ?>
+                <article class="region-card"
+                         data-name="<?php echo $row['name']; ?>"
+                         data-group="<?php echo $row['category']; ?>"
+                         data-link="details.php?id=<?php echo $row['id']; ?>">
+                    <img src="<?php echo $row['hero_image']; ?>" alt="<?php echo $row['name']; ?>">
                     <div class="region-content">
-                        <span class="region-tag">الوسطى</span>
-                        <h3>الرياض</h3>
-                        <p>عاصمة المملكة ومركزها السياسي والإداري والاقتصادي.</p>
-                        <a href="details.php?region=riyadh" class="details-link">عرض التفاصيل</a>
+                        <span class="region-tag"><?php echo $row['category']; ?></span>
+                        <h3><?php echo $row['name']; ?></h3>
+                        <p><?php echo $row['description']; ?></p>
+                        <a href="details.php?id=<?php echo $row['id']; ?>" class="details-link">عرض التفاصيل</a>
                     </div>
                 </article>
-
-                <article class="region-card" data-name="مكة المكرمة" data-group="western" data-link="details.php?region=makkah">
-                    <img src="images\regions\مكة .jpg" alt="مكة المكرمة">
-                    <div class="region-content">
-                        <span class="region-tag">الغربية</span>
-                        <h3>مكة المكرمة</h3>
-                        <p>منطقة ذات مكانة دينية عظيمة وتضم مكة وجدة والطائف.</p>
-                        <a href="details.php?region=makkah" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-                <article class="region-card" data-name="المدينة المنورة" data-group="western" data-link="details.php?region=madinah">
-                    <img src="images\regions\المدينة.jpg" alt="المدينة المنورة">
-                    <div class="region-content">
-                        <span class="region-tag">الغربية</span>
-                        <h3>المدينة المنورة</h3>
-                        <p>منطقة تاريخية ودينية مهمة وتضم المسجد النبوي الشريف.</p>
-                        <a href="details.php?region=madinah" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-                <article class="region-card" data-name="القصيم" data-group="central" data-link="details.php?region=qassim">
-                    <img src="images\regions\القصيم.jpg" alt="القصيم">
-                    <div class="region-content">
-                        <span class="region-tag">الوسطى</span>
-                        <h3>القصيم</h3>
-                        <p>تشتهر بالنشاط الزراعي والأسواق الشعبية والتراث المحلي.</p>
-                        <a href="details.php?region=qassim" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-                <article class="region-card" data-name="المنطقة الشرقية" data-group="eastern" data-link="details.php?region=eastern">
-                    <img src="images\regions\الشرقية.jpg" alt="المنطقة الشرقية">
-                    <div class="region-content">
-                        <span class="region-tag">الشرقية</span>
-                        <h3>المنطقة الشرقية</h3>
-                        <p>منطقة اقتصادية مهمة وتطل على الخليج العربي.</p>
-                        <a href="details.php?region=eastern" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-                <article class="region-card" data-name="عسير" data-group="southern" data-link="details.php?region=asir">
-                    <img src="images\regions\عسير.jpg" alt="عسير">
-                    <div class="region-content">
-                        <span class="region-tag">الجنوبية</span>
-                        <h3>عسير</h3>
-                        <p>منطقة جبلية جميلة تشتهر بأجوائها المعتدلة وطبيعتها.</p>
-                        <a href="details.php?region=asir" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-
-
-                <article class="region-card" data-name="حائل" data-group="northern" data-link="details.php?region=hail">
-                    <img src="images\regions\حائل.jpg" alt="حائل">
-                    <div class="region-content">
-                        <span class="region-tag">الشمالية</span>
-                        <h3>حائل</h3>
-                        <p>منطقة معروفة بتاريخها وتراثها وموقعها الجغرافي.</p>
-                        <a href="details.php?region=hail" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
-                <article class="region-card" data-name="جازان" data-group="southern" data-link="details.php?region=jazan">
-                    <img src="images\regions\جازان.jpg" alt="جازان">
-                    <div class="region-content">
-                        <span class="region-tag">الجنوبية</span>
-                        <h3>جازان</h3>
-                        <p>منطقة ساحلية جميلة تشتهر بالطبيعة والتنوع البيئي.</p>
-                        <a href="details.php?region=jazan" class="details-link">عرض التفاصيل</a>
-                    </div>
-                </article>
-
+            <?php } ?>
             </section>
 
         </div>
