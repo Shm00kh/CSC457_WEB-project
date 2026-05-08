@@ -65,3 +65,67 @@ document.querySelectorAll(".details-link").forEach(btn => {
         e.stopPropagation();
     });
 });
+
+// =========================
+// AI Chatbot
+// =========================
+
+const chatbotToggle = document.getElementById("chatbotToggle");
+const chatbotBox = document.getElementById("chatbotBox");
+const chatbotClose = document.getElementById("chatbotClose");
+const chatbotForm = document.getElementById("chatbotForm");
+const chatbotInput = document.getElementById("chatbotInput");
+const chatbotMessages = document.getElementById("chatbotMessages");
+
+if (chatbotToggle && chatbotBox) {
+    chatbotToggle.addEventListener("click", function () {
+        chatbotBox.classList.toggle("open");
+    });
+}
+
+if (chatbotClose && chatbotBox) {
+    chatbotClose.addEventListener("click", function () {
+        chatbotBox.classList.remove("open");
+    });
+}
+
+function addChatMessage(text, type) {
+    const message = document.createElement("div");
+    message.className = type === "user" ? "user-message" : "bot-message";
+    message.textContent = text;
+
+    chatbotMessages.appendChild(message);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+if (chatbotForm) {
+    chatbotForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const userText = chatbotInput.value.trim();
+        if (userText === "") return;
+
+        addChatMessage(userText, "user");
+        chatbotInput.value = "";
+
+        addChatMessage("جاري التفكير...", "bot");
+
+        try {
+            const response = await fetch("chatbot.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: userText })
+            });
+
+            const data = await response.json();
+
+            const thinkingMessage = chatbotMessages.lastChild;
+            thinkingMessage.textContent = data.reply || "لحظة 😅 صار خطأ بسيط، جرّب مرة ثانية";
+        } catch (error) {
+            const thinkingMessage = chatbotMessages.lastChild;
+            thinkingMessage.textContent = "تعذر الاتصال بالمساعد. تأكد من تشغيل الخادم والإنترنت.";
+        }
+    });
+}
