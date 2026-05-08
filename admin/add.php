@@ -113,11 +113,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>* الموقع</label>
                 <select name="category" required>
                     <option value="">اختر المنطقة..</option>
-                    <option value="central">الوسطى</option>
-                    <option value="western">الغربية</option>
-                    <option value="eastern">الشرقية</option>
-                    <option value="southern">الجنوبية</option>
-                    <option value="northern">الشمالية</option>
+                    <option value="الوسطى">الوسطى</option>
+                    <option value="الغربية">الغربية</option>
+                    <option value="الشرقية">الشرقية</option>
+                    <option value="الجنوبية">الجنوبية</option>
+                    <option value="الشمالية">الشمالية</option>
                 </select>
 
                 <label>* معلومات عامة</label>

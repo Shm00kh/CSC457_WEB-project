@@ -183,11 +183,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <label>* الموقع</label>
                     <select name="category" required>
-                        <option value="central" <?php if ($data["category"] == "central") echo "selected"; ?>>الوسطى</option>
-                        <option value="western" <?php if ($data["category"] == "western") echo "selected"; ?>>الغربية</option>
-                        <option value="eastern" <?php if ($data["category"] == "eastern") echo "selected"; ?>>الشرقية</option>
-                        <option value="southern" <?php if ($data["category"] == "southern") echo "selected"; ?>>الجنوبية</option>
-                        <option value="northern" <?php if ($data["category"] == "northern") echo "selected"; ?>>الشمالية</option>
+                        <option value="الوسطى" <?php if ($data["category"] == "الوسطى") echo "selected"; ?>>الوسطى</option>
+                        <option value="الغربية" <?php if ($data["category"] == "الغربية") echo "selected"; ?>>الغربية</option>
+                        <option value="الشرقية" <?php if ($data["category"] == "الشرقية") echo "selected"; ?>>الشرقية</option>
+                        <option value="الجنوبية" <?php if ($data["category"] == "الجنوبية") echo "selected"; ?>>الجنوبية</option>
+                        <option value="الشمالية" <?php if ($data["category"] == "الشمالية") echo "selected"; ?>>الشمالية</option>
                     </select>
 
                     <label>* معلومات عامة</label>
