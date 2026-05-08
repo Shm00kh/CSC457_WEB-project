@@ -36,11 +36,11 @@
 
                 <select id="regionFilter">
                     <option value="all">كل المناطق</option>
-                    <option value="central">الوسطى</option>
-                    <option value="western">الغربية</option>
-                    <option value="eastern">الشرقية</option>
-                    <option value="southern">الجنوبية</option>
-                    <option value="northern">الشمالية</option>
+                    <option value="الوسطى">الوسطى</option>
+                    <option value="الغربية">الغربية</option>
+                    <option value="الشرقية">الشرقية</option>
+                    <option value="الجنوبية">الجنوبية</option>
+                    <option value="الشمالية">الشمالية</option>
                 </select>
             </section>
 
@@ -70,33 +70,6 @@
     <footer class="site-footer">
         <p>© اكتشف السعودية - جامعة الملك سعود</p>
     </footer>
-    
-    <div class="chatbot-widget">
-    <button class="chatbot-toggle" id="chatbotToggle">💬</button>
-
-    <div class="chatbot-box" id="chatbotBox">
-        <div class="chatbot-header">
-            <div>
-                <h3>رحّال</h3>
-                <p>اسألني عن المناطق والمعالم والثقافة</p>
-            </div>
-            <button id="chatbotClose">×</button>
-        </div>
-
-        <div class="chatbot-messages" id="chatbotMessages">
-            <div class="bot-message">
-                            ياهلا 👋  
-                أنا رحّال، أساعدك تكتشف أماكن حلوة بالسعودية  
-                اسألني عن المدن، المعالم، الأجواء، أو حتى وين تروح بالويكند 😄
-            </div>
-        </div>
-
-        <form class="chatbot-form" id="chatbotForm">
-            <input type="text" id="chatbotInput" placeholder="اكتب سؤالك هنا..." autocomplete="off">
-            <button type="submit">إرسال</button>
-        </form>
-    </div>
-</div>
 
     <script src="script.js"></script>
 </body>
