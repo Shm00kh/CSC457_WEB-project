@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2026 at 06:23 PM
+-- Generation Time: May 08, 2026 at 09:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(1, 'admin', '08a76a2ec5240c9e3786d7f2ee7d78ec');
+(1, 'admin', 'admin1234');
 
 -- --------------------------------------------------------
 
@@ -64,14 +64,14 @@ CREATE TABLE `regions` (
 --
 
 INSERT INTO `regions` (`id`, `name`, `category`, `description`, `info`, `landmarks`, `hero_image`, `gallery_image1`, `gallery_image2`, `gallery_image3`) VALUES
-(1, 'الرياض', 'central', 'عاصمة المملكة ومركزها السياسي والإداري والاقتصادي.', 'تتميز المنطقة بنمو عمراني كبير وتحتضن العديد من المراكز الثقافية.', 'برج المملكة، قصر المصمك، المتحف الوطني', 'images/regions/الرياض.jpg', 'images/Riyadh/R1.jpg', 'images/Riyadh/R2.jpg', 'images/Riyadh/R3.jpg'),
-(2, 'مكة المكرمة', 'western', 'منطقة ذات مكانة دينية عظيمة وتضم مكة وجدة والطائف.', 'تتميز بمكانتها الدينية والتاريخية العظيمة.', 'المسجد الحرام، جدة التاريخية، الطائف', 'images/regions/مكة .jpg', 'images/Makkah/M1.jpg', 'images/Makkah/M2.jpg', 'images/Makkah/M3.jpg'),
-(3, 'المدينة المنورة', 'western', 'منطقة تاريخية ودينية مهمة وتضم المسجد النبوي الشريف.', 'ارتبطت بتاريخ إسلامي عظيم وتعد مقصداً مهماً للزوار.', 'المسجد النبوي، جبل أحد، قباء', 'images/regions/المدينة.jpg', 'images/Madinah/M1.jpg', 'images/Madinah/M2.jpg', 'images/Madinah/M3.jpg'),
-(4, 'المنطقة الشرقية', 'eastern', 'منطقة اقتصادية مهمة وتطل على الخليج العربي.', 'تضم عدداً من المدن المهمة وتعد مركزاً اقتصادياً بارزاً.', 'الدمام، الخبر، الأحساء', 'images/regions/الشرقية.jpg', 'images/Sharqiyah/S1.jpg', 'images/Sharqiyah/S2.jpg', 'images/Sharqiyah/S3.jpg'),
-(5, 'عسير', 'southern', 'منطقة جبلية جميلة تشتهر بأجوائها المعتدلة وطبيعتها.', 'تعد من أبرز المناطق السياحية في المملكة.', 'أبها، رجال ألمع، السودة', 'images/regions/عسير.jpg', 'images/Asir/A1.jpg', 'images/Asir/A2.jpg', 'images/Asir/A3.jpg'),
-(6, 'حائل', 'northern', 'منطقة معروفة بتاريخها وتراثها وموقعها الجغرافي.', 'ارتبطت المنطقة بعدد من الجوانب التاريخية والتراثية المهمة.', 'مدينة حائل، جبل أجا، جبل سلمى', 'images/regions/حائل.jpg', 'images/Hail/H1.jpg', 'images/Hail/H2.jpg', 'images/Hail/H3.jpg'),
-(7, 'جازان', 'southern', 'منطقة ساحلية جميلة تشتهر بالطبيعة والتنوع البيئي.', 'تعد من المناطق الحيوية في جنوب المملكة.', 'جازان، فرسان، فيفاء', 'images/regions/جازان.jpg', 'images/Jazan/J1.jpg', 'images/Jazan/J2.jpg', 'images/Jazan/J3.jpg'),
-(8, 'القصيم', 'central', 'تشتهر بالنشاط الزراعي والأسواق الشعبية والتراث المحلي.', 'تعد من المناطق المهمة في وسط المملكة.', 'بريدة، عنيزة، الأسواق الشعبية', 'images/regions/القصيم.jpg', 'images/Qassim/Q1.jpg', 'images/Qassim/Q2.jpg', 'images/Qassim/Q3.jpg');
+(1, 'الرياض', 'المنطقة الوسطى', 'عاصمة المملكة ومركزها السياسي والإداري والاقتصادي.', 'تتميز المنطقة بنمو عمراني كبير وتحتضن العديد من المراكز الثقافية.', 'برج المملكة، قصر المصمك، المتحف الوطني', 'images/regions/الرياض.jpg', 'images/Riyadh/R1.jpg', 'images/Riyadh/R2.jpg', 'images/Riyadh/R3.jpg'),
+(2, 'مكة المكرمة', 'المنطقة الغربية', 'منطقة ذات مكانة دينية عظيمة وتضم مكة وجدة والطائف.', 'تتميز بمكانتها الدينية والتاريخية العظيمة.', 'المسجد الحرام، جدة التاريخية، الطائف', 'images/regions/مكة .jpg', 'images/Makkah/M1.jpg', 'images/Makkah/M2.jpg', 'images/Makkah/M3.jpg'),
+(3, 'المدينة المنورة', 'المنطقة الغربية', 'منطقة تاريخية ودينية مهمة وتضم المسجد النبوي الشريف.', 'ارتبطت بتاريخ إسلامي عظيم وتعد مقصداً مهماً للزوار.', 'المسجد النبوي، جبل أحد، قباء', 'images/regions/المدينة.jpg', 'images/Madinah/M1.jpg', 'images/Madinah/M2.jpg', 'images/Madinah/M3.jpg'),
+(4, 'المنطقة الشرقية', 'المنطقة الشرقية', 'منطقة اقتصادية مهمة وتطل على الخليج العربي.', 'تضم عدداً من المدن المهمة وتعد مركزاً اقتصادياً بارزاً.', 'الدمام، الخبر، الأحساء', 'images/regions/الشرقية.jpg', 'images/Sharqiyah/S1.jpg', 'images/Sharqiyah/S2.jpg', 'images/Sharqiyah/S3.jpg'),
+(5, 'عسير', 'المنطقة الجنوبية', 'منطقة جبلية جميلة تشتهر بأجوائها المعتدلة وطبيعتها.', 'تعد من أبرز المناطق السياحية في المملكة.', 'أبها، رجال ألمع، السودة', 'images/regions/عسير.jpg', 'images/Asir/A1.jpg', 'images/Asir/A2.jpg', 'images/Asir/A3.jpg'),
+(6, 'حائل', 'المنطقة الشمالية', 'منطقة معروفة بتاريخها وتراثها وموقعها الجغرافي.', 'ارتبطت المنطقة بعدد من الجوانب التاريخية والتراثية المهمة.', 'مدينة حائل، جبل أجا، جبل سلمى', 'images/regions/حائل.jpg', 'images/Hail/H1.jpg', 'images/Hail/H2.jpg', 'images/Hail/H3.jpg'),
+(7, 'جازان', 'المنطقة الجنوبية', 'منطقة ساحلية جميلة تشتهر بالطبيعة والتنوع البيئي.', 'تعد من المناطق الحيوية في جنوب المملكة.', 'جازان، فرسان، فيفاء', 'images/regions/جازان.jpg', 'images/Jazan/J1.jpg', 'images/Jazan/J2.jpg', 'images/Jazan/J3.jpg'),
+(8, 'القصيم', 'المنطقة الوسطى', 'تشتهر بالنشاط الزراعي والأسواق الشعبية والتراث المحلي.', 'تعد من المناطق المهمة في وسط المملكة.', 'بريدة، عنيزة، الأسواق الشعبية', 'images/regions/القصيم.jpg', 'images/Qassim/Q1.jpg', 'images/Qassim/Q2.jpg', 'images/Qassim/Q3.jpg');
 
 --
 -- Indexes for dumped tables
