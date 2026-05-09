@@ -6,7 +6,7 @@ $input = json_decode(file_get_contents("php://input"), true);
 
 $message = $input["message"] ?? "";
 
-$apiKey = "";
+$apiKey = "A8IGGaMV5SvmPlhPajN2humvo2P8XSLzE8Q8443p0Wo8cNxRFiG7JQQJ99CEACHYHv6XJ3w3AAAAACOGi0ep";
 
 $endpoint = "https://csc457-resource.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview";
 
